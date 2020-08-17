@@ -10,55 +10,43 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/trends.css">
 </head>
 
 <body>
     <section class="login-block">
-        <div class="container">
-            <div class="row justify-content-end ">
-                <!-- <div class="col">
-                    <div class="card mt-2" style="width: 8rem;">
-                        <img src="./images/logo-1.png" class="card-img-top" alt="...">
+        <div class="container pt-5"  style="height:90vh">
+            <div class="row align-items-start pt-5">
+                <div class="col"  style="height:100vh">
+                    <div class="row align-items-start">
+                        <img src="./images/logo-1.png" style="width:100px; height: 70px;;" alt="..."
+                            class="img-thumbnail">
+                    </div>
+                    <div class="row align-items-center" >
+                       
+                    </div>
+                    <div class="row align-items-end">
                     
-                      </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <div class="card mt-2" style="width: 8rem;">
-                        <img src="./images/logo-1.png" class="card-img-top" alt="...">
-                      
-                      </div>
-                </div> -->
-            </div>
-            <div class="row pt-5">
-                <div class="col">
-                    <div class="card" style="width:400px;">
-                        <img class="card-img-top" src="./images/trends-01.jpg" style="height: 250px;" alt="Card image">
+                <div class="col-6">
+                    <div class="card" style="height:100vh">
                         <div class="card-body">
-
-                            <p class="card-text">Trends on Social Media</p>
-                            <a href="trends.html" class="btn btn-primary">Trends</a>
-                        </div>
+                    <div id="chart"></div>
+                    </div>
                     </div>
                 </div>
                 <div class="col">
-                </div>
-                <div class="col">
-                    <div class="card" style="width:400px; ">
-                        <img class="card-img-top" src="./images/search-01.jpg" style="height: 250px;" alt="Card image">
-                        <div class="card-body">
-
-                            <p class="card-text">Trending Search</p>
-                            <a href="#" class="btn btn-primary">Trending Search</a>
-                        </div>
+                    <div class="row align-items-start">
+                        <img src="./images/logo-1.png" style="width:100px; height: 70px;;" alt="..."
+                            class="img-thumbnail">
                     </div>
                 </div>
             </div>
-
+           
         </div>
-  
-
     </section>
-    <footer id="footer" class="footer py-4 bg-dark text-white-50" >
+    <footer id="footer" class="footer py-4 bg-dark text-white-50">
         <div class="text-center">
             <small>Copyright &copy; Data Crawler</small>
         </div>
@@ -73,5 +61,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>d3.select('#chart')
+        .selectAll("div")
+        .data([4, 8, 15, 16, 23, 42])
+        .enter()
+        .append("div")
+        .style("height", (d)=> d + "px")</script>
 </html>
