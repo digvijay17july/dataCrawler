@@ -122,21 +122,7 @@ function IndexNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <Button
-                  className="nav-link btn-neutral"
-                  color="info"
-                  href="#pablo"
-                  id="upgrade-to-pro"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <i className="now-ui-icons arrows-1_share-66 mr-1"></i>
-                  <p>Upgrade to PRO</p>
-                </Button>
-                <UncontrolledTooltip target="#upgrade-to-pro">
-                  Cooming soon!
-                </UncontrolledTooltip>
-              </NavItem>
+
               <NavItem>
                 <NavLink
                   href="https://twitter.com/CreativeTim?ref=creativetim"
