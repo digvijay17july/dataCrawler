@@ -18,17 +18,14 @@ function Download() {
             <Col className="text-center" lg="8" md="12">
               <h3 className="title">Do you love this Bootstrap 4 UI Kit?</h3>
               <h5 className="description">
-                Cause if you do, it can be yours for FREE. Hit the button below
-                to navigate to Creative Tim or Invision where you can find the
-                kit in HTML or Sketch/PSD format. Start a new project or give an
-                old Bootstrap project a new look!
+
               </h5>
             </Col>
             <Col className="text-center" lg="8" md="12">
               <Button
                 className="btn-round mr-1"
                 color="info"
-                href="https://www.creative-tim.com/product/now-ui-kit-react?ref=nukr-index-page"
+                href="#"
                 role="button"
                 size="lg"
               >
@@ -37,7 +34,7 @@ function Download() {
               <Button
                 className="btn-round"
                 color="primary"
-                href="https://www.invisionapp.com/now?ref=creativetim"
+                href="#"
                 outline
                 role="button"
                 size="lg"
@@ -56,7 +53,7 @@ function Download() {
               <h5 className="description">
                 We're going to launch{" "}
                 <a
-                  href="http://demos.creative-tim.com/now-ui-kit-pro-react/#/presentation?ref=nukr-index-page"
+                  href="#"
                   onClick={(e) => e.preventDefault()}
                 >
                   Now UI Kit PRO React
@@ -70,7 +67,7 @@ function Download() {
               <Button
                 className="btn-neutral btn-round"
                 color="default"
-                href="http://demos.creative-tim.com/now-ui-kit-pro-react/#/presentation?ref=nukr-index-page"
+                href="#"
                 size="lg"
                 disabled
               >
@@ -89,7 +86,7 @@ function Download() {
               <Button
                 className="btn-neutral btn-icon btn-round"
                 color="twitter"
-                href="https://www.twitter.com/creativetim?ref=creativetim"
+                href="#"
                 id="tooltip86114138"
                 size="lg"
                 target="_blank"
@@ -102,7 +99,7 @@ function Download() {
               <Button
                 className="btn-neutral btn-icon btn-round"
                 color="facebook"
-                href="https://www.facebook.com/creativetim?ref=creativetim"
+                href="#"
                 id="tooltip735272548"
                 size="lg"
                 target="_blank"
@@ -115,7 +112,7 @@ function Download() {
               <Button
                 className="btn-neutral btn-icon btn-round"
                 color="linkedin"
-                href="https://www.linkedin.com/company-beta/9430489/?ref=creativetim"
+                href="#"
                 id="tooltip647117716"
                 size="lg"
                 target="_blank"
@@ -128,7 +125,7 @@ function Download() {
               <Button
                 className="btn-neutral btn-icon btn-round"
                 color="github"
-                href="https://github.com/creativetimofficial/now-ui-kit-react?ref=creativetim"
+                href="#"
                 id="tooltip331904895"
                 size="lg"
                 target="_blank"

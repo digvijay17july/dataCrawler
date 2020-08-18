@@ -54,14 +54,14 @@ function IndexNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
+              href="#"
               target="_blank"
               id="navbar-brand"
             >
-              Now UI Kit React
+              DataCrawler
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
+              DataCrawler
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
@@ -114,7 +114,7 @@ function IndexNavbar() {
                     All components
                   </DropdownItem>
                   <DropdownItem
-                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
+                    href="#"
                     target="_blank"
                   >
                     <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
@@ -125,7 +125,7 @@ function IndexNavbar() {
 
               <NavItem>
                 <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  href="#"
                   target="_blank"
                   id="twitter-tooltip"
                 >
@@ -138,7 +138,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  href="#"
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -151,7 +151,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  href="#"
                   target="_blank"
                   id="instagram-tooltip"
                 >
