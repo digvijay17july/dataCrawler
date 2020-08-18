@@ -20,7 +20,7 @@ function TransparentFooter() {
             </li>
             <li>
               <a
-                href="#"
+                href="/aboutus"
                 target="_blank"
               >
                 About Us
