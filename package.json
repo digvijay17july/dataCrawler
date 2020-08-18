@@ -44,5 +44,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.9.5"
-  }
+  },
+   "engines": {
+     "node": "10.x"
+   }
 }
