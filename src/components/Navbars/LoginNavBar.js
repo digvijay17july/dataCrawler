@@ -89,8 +89,7 @@ function LoginNavbar() {
           </UncontrolledDropdown>
           <div className="navbar-translate">
             <NavbarBrand
-              href="#"
-              target="_blank"
+              href="/"
               id="navbar-brand"
             >
               DataCrawler
