@@ -33,8 +33,8 @@ function DashboardNavbar() {
                         <Container>
                             <div className="navbar-translate">
                                 <NavbarBrand
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
+                                    href="/panel"
+                                    
                                 >
                                     Home
                   </NavbarBrand>

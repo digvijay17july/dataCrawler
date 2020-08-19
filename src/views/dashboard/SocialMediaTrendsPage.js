@@ -20,11 +20,12 @@ import DashboardNavBar from "components/Navbars/DashboardNavBar.js";
 import LeftSideBar from "components/Sidebar/LsideBarSMtrends.js";
 import RightSideBar from "components/Sidebar/RsideBarSMtrends.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import BarCharts from "components/charts/BarChart.js"
-import LineCharts from "components/charts/LineChart.js"
+import BarChart from "components/charts/BarChart.js"
+import LineChart from "components/charts/LineChart.js"
 function SocialMediaTrendsPage() {
 
-    const [iconPills, setIconPills] = React.useState("2");
+    const [iconPills, setIconPills] = React.useState("1");
+    const [pills, setPills] = React.useState("1");
 
     const dataOne = {
         labels: ["#Corona", "#Asia", "#Europe", "#Latin America", "#North America"],
@@ -64,22 +65,7 @@ function SocialMediaTrendsPage() {
         }]
     }
 
-    const dataThree = {
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-        datasets: [{
-            label: "Tweets (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-            data: [2478, 5267, 734, 784, 433]
-        }]
-    }
-    const dataFour = {
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-        datasets: [{
-            label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-            data: [2478, 5267, 734, 784, 433]
-        }]
-    }
+
 
     const optionsOne = {
         legend: {
@@ -90,13 +76,13 @@ function SocialMediaTrendsPage() {
             text: 'Tweets (millions) in 2020'
         }
     }
-        const optionsTwo = {
-            title: {
-                display: true,
-                text: 'Tweets (millions) in 2020'
-            }
+    const optionsTwo = {
+        title: {
+            display: true,
+            text: 'Tweets (millions) in 2020'
         }
-    
+    }
+
     return (
         <>
             <DashboardNavBar />
@@ -112,7 +98,7 @@ function SocialMediaTrendsPage() {
                         <Col md={8}>
                             <div className="text-center">
                                 <Container >
-                                    < Card className = " section-full-screen" >
+                                    < Card className=" section-full-screen" >
                                         <CardHeader>
                                             <Nav className="justify-content-center" role="tablist" tabs>
                                                 <NavItem>
@@ -171,24 +157,22 @@ function SocialMediaTrendsPage() {
                                         </CardHeader>
                                         <CardBody>
                                             <TabContent
-                                                className = "text-center"
-                                              
-                                                activeTab={"iconPills" + iconPills}
-                                            >
+                                                className="text-center"
+
+                                                activeTab={"iconPills" + iconPills} >
                                                 <TabPane tabId="iconPills1">
-                                                    <BarCharts dataOne={dataOne} optionsOne={optionsOne}/>
-                                                    
+                                                    <BarChart dataOne={dataOne} optionsOne={optionsOne} />
+
                                                 </TabPane>
-                                                <TabPane tabId="iconPills2 ">
-                                                   
-                                              <LineCharts dataTwo={dataTwo} optionsTwo={optionsOne}/>
-                                                
+                                                <TabPane tabId="iconPills2">
+                                            
+                                                    <LineChart dataTwo={dataTwo} optionsTwo={optionsTwo} />
                                                 </TabPane>
                                                 <TabPane tabId="iconPills3">
-                                                   <BarCharts dataOne={dataOne} optionsOne={optionsOne}/>
+                                                    <LineChart dataTwo={dataTwo} optionsTwo={optionsTwo} />
                                                 </TabPane>
                                                 <TabPane tabId="iconPills4">
-                                             <BarCharts dataOne={dataOne} optionsOne={optionsOne}/>
+                                                    <BarChart dataOne={dataOne} optionsOne={optionsOne} />
                                                 </TabPane>
                                             </TabContent>
                                         </CardBody>

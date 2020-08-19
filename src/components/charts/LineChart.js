@@ -1,11 +1,13 @@
 import React from "react"
-import {Line} from 'react-chartjs-2';
-function LineCharts(props) {
+import { Line } from 'react-chartjs-2';
+
+function LineChart(props) {
 
     console.log(JSON.stringify(props.dataTwo))
-    return (<Line data={props.dataTwo}
+    return (<div><Line data={props.dataTwo}
         options={props.optionsTwo}
-      ></Line>)
+        options={{ maintainAspectRatio: true }}
+    ></Line></div>)
 };
 
-export default LineCharts
+export default LineChart
