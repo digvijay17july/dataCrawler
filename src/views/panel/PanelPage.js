@@ -52,7 +52,7 @@ function PanelPage() {
                     <p className="category text-info">Search using kewords</p>
                     <p className="description">
                      Select this option to get the details of trending search {" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      < a href = "/searchTrends" >
                         links
                       </a>{" "}
                      
@@ -71,8 +71,8 @@ function PanelPage() {
                     <h4 className="title">Social Media Trends</h4>
                     <p className="category text-info">Get the trending keywords</p>
                     <p className="description">
-                      Select the option to get the trending from social media{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      Select this option to get the trending from social media{" "}
+                      <a href="/socialMediaTrends" >
                         links
                       </a>{" "}
                   

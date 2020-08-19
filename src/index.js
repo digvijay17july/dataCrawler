@@ -16,6 +16,8 @@ import PanelPage from "views/panel/PanelPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import SignUpPage from "views/signUp/SignUpPage.js";
 import AboutUsPage from "views/aboutUs/AboutUs.js"
+import SocialMediaTrendsPage from "views/dashboard/SocialMediaTrendsPage.js"
+import SearchTrendsPage from "views/dashboard/SearchTrendsPage.js"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -45,6 +47,14 @@ ReactDOM.render(
         <Route
           path="/panel"
           render={(props) => <PanelPage {...props} />}
+        />
+                <Route
+          path="/socialMediaTrends"
+          render={(props) => <SocialMediaTrendsPage {...props} />}
+        />
+                <Route
+          path="/searchTrends"
+          render={(props) => <SearchTrendsPage {...props} />}
         />
         <Redirect to="/login" />
         <Redirect from="/" to="/login" />
