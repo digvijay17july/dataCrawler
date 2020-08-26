@@ -20,16 +20,18 @@ import {
 } from "reactstrap";
 
 function LsideBarSMtrends() {
+
     const [collapseOpen, setCollapseOpen] = React.useState(false);
     const [iconPills, setIconPills] = React.useState("1");
     return (
         <>
-            < section className = "section-full-screen " >
-                <Container fluid>
+            < section  >
+                <Container >
                     <Card  >
-                        < CardHeader className="section-full-screen " >
-                          
-                            <Nav className="justify-content-left" role="tablist" tabs>
+                        <h4 className="title text-center">Social Media</h4>
+                        < CardHeader className="section-full-screen pb-2" >
+                            
+                            <Nav className="justify-content-right" role="tablist" tabs>
                                 <NavItem>
                                     <NavLink
                                         className={iconPills === "1" ? "active" : ""}
@@ -40,7 +42,8 @@ function LsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons objects_umbrella-13"></i>
-                        #HashTags
+                                       
+                        Twitter  <i className={iconPills === "1" ? "arrow right" : ""}></i>
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -53,7 +56,7 @@ function LsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons shopping_cart-simple"></i>
-                        Topics
+                        Facebook  <i className={iconPills === "2" ? "arrow right" : ""}></i>
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -66,7 +69,7 @@ function LsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons shopping_shop"></i>
-                        Trends
+                        Instagaram <i className={iconPills === "3" ? "arrow right" : ""}></i>
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -79,7 +82,7 @@ function LsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons ui-2_settings-90"></i>
-                        Demographics
+                        Linkedin <i className={iconPills === "4" ? "arrow right" : ""}></i>
                       </NavLink>
                                 </NavItem>
                             </Nav>
@@ -91,6 +94,7 @@ function LsideBarSMtrends() {
             </ section>
         </>
     );
+
 
 }
 export default LsideBarSMtrends;

@@ -20,15 +20,18 @@ import {
 } from "reactstrap";
 
 function RsideBarSMtrends() {
+
     const [collapseOpen, setCollapseOpen] = React.useState(false);
     const [iconPills, setIconPills] = React.useState("1");
     return (
         <>
-            < section  >
-                <Container >
+            < section className="section-full-screen " >
+                <Container fluid>
                     <Card  >
-                        < CardHeader className = "section-full-screen pb-2" >
-                            <Nav className="justify-content-right" role="tablist" tabs>
+                        <h4 className="title text-center ">Graph Filters</h4>
+                        < CardHeader className="section-full-screen " >
+
+                            <Nav className="justify-content-left" role="tablist" tabs>
                                 <NavItem>
                                     <NavLink
                                         className={iconPills === "1" ? "active" : ""}
@@ -39,7 +42,7 @@ function RsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons objects_umbrella-13"></i>
-                        Twitter
+                        #HashTags
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -52,7 +55,7 @@ function RsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons shopping_cart-simple"></i>
-                        Facebook
+                        Topics
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -65,7 +68,7 @@ function RsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons shopping_shop"></i>
-                        Instagaram
+                        Trends
                       </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -78,7 +81,7 @@ function RsideBarSMtrends() {
                                         }}
                                     >
                                         <i className="now-ui-icons ui-2_settings-90"></i>
-                        Linkedin
+                        Demographics
                       </NavLink>
                                 </NavItem>
                             </Nav>
@@ -90,6 +93,5 @@ function RsideBarSMtrends() {
             </ section>
         </>
     );
-
 }
 export default RsideBarSMtrends;
