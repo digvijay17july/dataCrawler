@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+
 
 // reactstrap components
 import {
@@ -22,6 +23,7 @@ import RightSideBar from "components/Sidebar/RsideBarSMtrends.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import BarChart from "components/charts/BarChart.js"
 import LineChart from "components/charts/LineChart.js"
+
 function SocialMediaTrendsPage() {
 
     const [iconPills, setIconPills] = React.useState("1");
@@ -82,6 +84,35 @@ function SocialMediaTrendsPage() {
             text: 'Tweets (millions) in 2020'
         }
     }
+    const twitterFilterOptions = {
+        options: [{ key: "1", value: "#tags" }, { key: "2", value:"#trends"}],
+        name: "Twitter"
+    }
+    const facebookFilterOptions = {
+        options: [{ key: "1", value: "#posts" }, { key: "2", value: "#trendingPages" }],
+        name: "Facebook"
+    }
+    const linkedInFilterOptions = {
+        options: [{ key: "1", value: "#posts" }, { key: "2", value: "#trendingPosts" }],
+        name: "LinkedIn"
+    }
+    const instagaramFilterOptions = {
+        options: [{ key: "1", value: "#tags" }, { key: "2", value: "#posts" }, { key: "3", value: "#trendingPosts" }],
+        name: "Instagaram"
+    }
+    const youTubeFilterOptions = {
+        options: [{ key: "1", value: "#videos" }, { key: "2", value: "#trailers" }, { key: "3", value: "#trendingVideos" }],
+        name: "Youtube"
+    }
+
+    const allFilterOptions = {
+     youTubeFilterOptions :youTubeFilterOptions,
+        instagaramFilterOptions: instagaramFilterOptions,
+        linkedInFilterOptions: linkedInFilterOptions,
+        facebookFilterOptions: facebookFilterOptions,
+        twitterFilterOptions: twitterFilterOptions
+    }
+    const [filterOptions, setFilterOptions] = useState(twitterFilterOptions.options)
 
     return (
         <>
@@ -92,7 +123,7 @@ function SocialMediaTrendsPage() {
                 <Container fluid>
                     <Row>
                         <Col md={2}>
-                            <LeftSideBar />
+                            <LeftSideBar allFilterOptions={allFilterOptions} setFilterOptions={setFilterOptions}/>
 
                         </Col>
                         <Col md={8}>
@@ -165,7 +196,7 @@ function SocialMediaTrendsPage() {
 
                                                 </TabPane>
                                                 <TabPane tabId="iconPills2">
-                                            
+
                                                     <LineChart dataTwo={dataTwo} optionsTwo={optionsTwo} />
                                                 </TabPane>
                                                 <TabPane tabId="iconPills3">
@@ -182,7 +213,7 @@ function SocialMediaTrendsPage() {
                             </div>
                         </Col>
                         <Col md={2}>
-                            <RightSideBar />
+                            <RightSideBar filterOptions={filterOptions} />
                         </Col>
                     </ Row>
                     <Row>

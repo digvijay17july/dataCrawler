@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -19,10 +19,28 @@ import {
     CardBody
 } from "reactstrap";
 
-function RsideBarSMtrends() {
+
+function RsideBarSMtrends(props) {
 
     const [collapseOpen, setCollapseOpen] = React.useState(false);
     const [iconPills, setIconPills] = React.useState("1");
+
+    const changeFilterIconPill = (pillPosition) => {
+        console.log("updated pill positions: " + pillPosition)
+
+    }
+    function ListItem(props) {
+
+        return (<NavItem><NavLink className={iconPills === props.index ? "active" : ""} onClick={(e) => { e.preventDefault(); setIconPills(props.index) }} href="#pablo"> {props.value}</NavLink></NavItem>);
+    }
+    console.log("filter options are :" + JSON.stringify(props.filterOptions))
+    const listItems = [];
+    props.filterOptions.forEach((item, index) => {
+        listItems.push(<ListItem index={item.key} key={item.key} value={item.value} />)
+    });
+
+
+
     return (
         <>
             < section className="section-full-screen " >
@@ -32,20 +50,8 @@ function RsideBarSMtrends() {
                         < CardHeader className="section-full-screen " >
 
                             <Nav className="justify-content-left" role="tablist" tabs>
-                                <NavItem>
-                                    <NavLink
-                                        className={iconPills === "1" ? "active" : ""}
-                                        href="#pablo"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            setIconPills("1");
-                                        }}
-                                    >
-                                        <i className="now-ui-icons objects_umbrella-13"></i>
-                        #HashTags
-                      </NavLink>
-                                </NavItem>
-                                <NavItem>
+                                {listItems}
+                                {/* <NavItem>
                                     <NavLink
                                         className={iconPills === "2" ? "active" : ""}
                                         href="#pablo"
@@ -57,8 +63,8 @@ function RsideBarSMtrends() {
                                         <i className="now-ui-icons shopping_cart-simple"></i>
                         Topics
                       </NavLink>
-                                </NavItem>
-                                <NavItem>
+                                </NavItem> */}
+                                {/* <NavItem>
                                     <NavLink
                                         className={iconPills === "3" ? "active" : ""}
                                         href="#pablo"
@@ -83,7 +89,7 @@ function RsideBarSMtrends() {
                                         <i className="now-ui-icons ui-2_settings-90"></i>
                         Demographics
                       </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                             </Nav>
                         </CardHeader>
                     </Card>
