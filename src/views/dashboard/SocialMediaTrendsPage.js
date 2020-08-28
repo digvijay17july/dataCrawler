@@ -26,7 +26,8 @@ import RightSideBar from "components/Sidebar/RsideBarSMtrends.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import BarChart from "components/charts/BarChart.js"
 import LineChart from "components/charts/LineChart.js"
-
+import html2canvas from "html2canvas";
+const pdfConverter = require("jspdf");
 function SocialMediaTrendsPage() {
 
     const [iconPills, setIconPills] = React.useState("1");
@@ -147,7 +148,30 @@ function SocialMediaTrendsPage() {
     }
    
     const [filterOptions, setFilterOptions] = useState(twitterFilterOptions.options)
+    const div2PDF = (e,id) => {
+        /////////////////////////////
+        // Hide/show button if you need
+        /////////////////////////////
 
+        const but = e.target;
+        // but.style.display = "none";
+        let input = window.document.getElementsByClassName(id)[0]
+
+        html2canvas(input).then(canvas => {
+            const img = canvas.toDataURL("image/png");
+            const pdf = new pdfConverter("l", "pt");
+            pdf.addImage(
+                img,
+                "png",
+                input.offsetLeft+20,
+                input.offsetTop+20,
+                input.clientWidth+20,
+                input.clientHeight+20
+            );
+            pdf.save("chart.pdf");
+            // but.style.display = "block";
+        });
+    };
     return (
         <>
             <DashboardNavBar />
@@ -226,18 +250,38 @@ function SocialMediaTrendsPage() {
 
                                                 activeTab={"iconPills" + iconPills} >
                                                 <TabPane tabId="iconPills1">
-                                                    <BarChart dataOne={dataOne} optionsOne={optionsOne} />
-
+                                                   
+                                                  
+                                                    <div className="iconPills1">
+                                                        <BarChart dataOne={dataOne} optionsOne={optionsOne} />
+                                                    </div>
+                                                    <FormGroup className="text-center">
+                                                        <Button onClick={e => div2PDF(e, "iconPills1")}>Export As PDF</Button>
+                                                        </FormGroup>
                                                 </TabPane>
                                                 <TabPane tabId="iconPills2">
-
-                                                    <LineChart dataTwo={dataTwo} optionsTwo={optionsTwo} />
+                                                    <div className="iconPills2">
+                                                        <LineChart className="iconPills2" dataTwo={dataTwo} optionsTwo={optionsTwo} />
+                                                        </div>
+                                                    <FormGroup className="text-center">
+                                                        <Button onClick={e => div2PDF(e, "iconPills2")}>Export As PDF</Button>
+                                                    </FormGroup>
                                                 </TabPane>
                                                 <TabPane tabId="iconPills3">
-                                                    <LineChart dataTwo={dataTwo} optionsTwo={optionsTwo} />
+                                                    <div className="iconPills3">
+                                                        <LineChart className="iconPills3" dataTwo={dataTwo} optionsTwo={optionsTwo} />
+                                                        </div>
+                                                    <FormGroup className="text-center">
+                                                        <Button onClick={e => div2PDF(e, "iconPills3")}>Export As PDF</Button>
+                                                    </FormGroup>
                                                 </TabPane>
                                                 <TabPane tabId="iconPills4">
-                                                    <BarChart dataOne={dataOne} optionsOne={optionsOne} />
+                                                    <div className="iconPills4">
+                                                        <BarChart className="iconPills4" dataOne={dataOne} optionsOne={optionsOne} />
+                                                        </div>
+                                                    <FormGroup className="text-center">
+                                                        <Button onClick={e => div2PDF(e, "iconPills4")}>Export As PDF</Button>
+                                                    </FormGroup>
                                                 </TabPane>
                                             </TabContent>
                                         </CardBody>
