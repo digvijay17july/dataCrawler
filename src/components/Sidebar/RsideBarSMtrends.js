@@ -31,12 +31,12 @@ function RsideBarSMtrends(props) {
     }
     function ListItem(props) {
 
-        return (<NavItem><NavLink className={iconPills === props.index ? "active" : ""} onClick={(e) => { e.preventDefault(); setIconPills(props.index) }} href="#pablo"> {props.value}</NavLink></NavItem>);
+        return (<NavItem><NavLink className={iconPills === props.index ? "active" : ""} onClick={(e) => { e.preventDefault(); setIconPills(props.index) }} href="#pablo"> {props.value}</NavLink>{iconPills === props.index ?props.searchOptions:null} </NavItem>);
     }
-    console.log("filter options are :" + JSON.stringify(props.filterOptions))
+    console.log("filter options are :" + (props.filterOptions))
     const listItems = [];
     props.filterOptions.forEach((item, index) => {
-        listItems.push(<ListItem index={item.key} key={item.key} value={item.value} />)
+        listItems.push(<ListItem index={item.key} key={item.key} value={item.value} searchOptions={item.searchOptions} />)
     });
 
 

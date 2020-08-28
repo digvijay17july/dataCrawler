@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
+import Datetime from "react-datetime";
 
 // reactstrap components
 import {
+    Button,
     Card,
     CardHeader,
     CardBody,
@@ -14,6 +15,8 @@ import {
     Container,
     Row,
     Col,
+    FormGroup,
+    Input,
 } from "reactstrap";
 
 // core components
@@ -84,34 +87,65 @@ function SocialMediaTrendsPage() {
             text: 'Tweets (millions) in 2020'
         }
     }
+
+    const searchOptions = (type) => {
+        switch (type) {
+            case "DatePicker": return ((<div className="datepicker-container">
+                <hr></hr>
+                <FormGroup>
+                    <Datetime
+                        timeFormat={false}
+                        inputProps={{ placeholder: "Datetime Picker Here" }}
+                    />
+                </FormGroup>
+                    <FormGroup>
+                    <Input
+                        defaultValue=""
+                        placeholder="Search"
+                        type="text"
+                    ></Input>
+                    </FormGroup>
+                <FormGroup>
+                    <Button className="btn-round" color="default" type="button">
+                        Search
+              </Button>
+                </FormGroup>
+                <hr></hr>
+            </div>));
+                break;
+        }
+    }
     const twitterFilterOptions = {
-        options: [{ key: "1", value: "#tags" }, { key: "2", value:"#trends"}],
-        name: "Twitter"
+        options: [{
+            key: "1", value: "#tags", searchOptions: searchOptions("DatePicker")
+        }, { key: "2", value: "#trends", searchOptions: searchOptions("DatePicker") }],
+            name: "Twitter"
     }
     const facebookFilterOptions = {
-        options: [{ key: "1", value: "#posts" }, { key: "2", value: "#trendingPages" }],
+        options: [{ key: "1", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trendingPages", searchOptions: searchOptions("DatePicker") }],
         name: "Facebook"
     }
     const linkedInFilterOptions = {
-        options: [{ key: "1", value: "#posts" }, { key: "2", value: "#trendingPosts" }],
+        options: [{ key: "1", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trendingPosts", searchOptions: searchOptions("DatePicker") }],
         name: "LinkedIn"
     }
     const instagaramFilterOptions = {
-        options: [{ key: "1", value: "#tags" }, { key: "2", value: "#posts" }, { key: "3", value: "#trendingPosts" }],
+        options: [{ key: "1", value: "#tags", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "3", value: "#trendingPosts", searchOptions: searchOptions("DatePicker") }],
         name: "Instagaram"
     }
     const youTubeFilterOptions = {
-        options: [{ key: "1", value: "#videos" }, { key: "2", value: "#trailers" }, { key: "3", value: "#trendingVideos" }],
+        options: [{ key: "1", value: "#videos", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trailers", searchOptions: searchOptions("DatePicker") }, { key: "3", value: "#trendingVideos", searchOptions: searchOptions("DatePicker") }],
         name: "Youtube"
     }
 
     const allFilterOptions = {
-     youTubeFilterOptions :youTubeFilterOptions,
+        youTubeFilterOptions: youTubeFilterOptions,
         instagaramFilterOptions: instagaramFilterOptions,
         linkedInFilterOptions: linkedInFilterOptions,
         facebookFilterOptions: facebookFilterOptions,
         twitterFilterOptions: twitterFilterOptions
     }
+   
     const [filterOptions, setFilterOptions] = useState(twitterFilterOptions.options)
 
     return (
@@ -123,7 +157,7 @@ function SocialMediaTrendsPage() {
                 <Container fluid>
                     <Row>
                         <Col md={2}>
-                            <LeftSideBar allFilterOptions={allFilterOptions} setFilterOptions={setFilterOptions}/>
+                            <LeftSideBar allFilterOptions={allFilterOptions} setFilterOptions={setFilterOptions} />
 
                         </Col>
                         <Col md={8}>
