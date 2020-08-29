@@ -70,14 +70,58 @@ function DashboardNavbar() {
                                             <p>Profile</p>
                                         </NavLink>
                                     </NavItem>
-                                    <NavItem>
-                                        <NavLink
+                                    <UncontrolledDropdown nav>
+                                        <DropdownToggle
+                                            caret
+                                            color="default"
                                             href="#pablo"
+                                            nav
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <p>Settings</p>
-                                        </NavLink>
-                                    </NavItem>
+                                            <i
+                                                aria-hidden={true}
+                                                className="now-ui-icons ui-1_settings-gear-63"
+                                            ></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem header tag="a">
+                                                Dropdown header
+                          </DropdownItem>
+                                            <DropdownItem
+                                                href="#pablo"
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                Action
+                          </DropdownItem>
+                                            <DropdownItem
+                                                href="#pablo"
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                Another action
+                          </DropdownItem>
+                                            <DropdownItem
+                                                href="#pablo"
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                Something else here
+                          </DropdownItem>
+                                            <div className="divider"></div>
+                                            <DropdownItem
+                                                href="#pablo"
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                Separated link
+                          </DropdownItem>
+                                            <div className="divider"></div>
+                                            <DropdownItem
+                                                href="#pablo"
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                One more separated link
+                          </DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+
                                 </Nav>
                             </Collapse>
                         </Container>
