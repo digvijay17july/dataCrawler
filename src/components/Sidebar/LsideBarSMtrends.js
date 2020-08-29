@@ -43,7 +43,7 @@ function LsideBarSMtrends(props) {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setIconPills("1");
-                                            props.setFilterOptions(props.allFilterOptions.twitterFilterOptions.options)
+                                            props.setFilterOptions(props.allFilterOptions.twitterFilterOptions)
                                         }}
                                     >
                                         <i className="fab fa-twitter"></i>
@@ -58,12 +58,11 @@ function LsideBarSMtrends(props) {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setIconPills("2");
-                                            props.setFilterOptions(props.allFilterOptions.facebookFilterOptions.options)
+                                            props.setFilterOptions(props.allFilterOptions.facebookFilterOptions)
                                         }}
                                     >
                                         <i className="fab fa-facebook-square"></i>
-                                        {" "}{props.allFilterOptions.facebookFilterOptions.name}
-                                         <i className={iconPills === "2" ? "arrow right" : ""}></i>
+                                        {" "}{props.allFilterOptions.facebookFilterOptions.name}<i className={iconPills === "2" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -73,7 +72,7 @@ function LsideBarSMtrends(props) {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setIconPills("3");
-                                            props.setFilterOptions(props.allFilterOptions.instagaramFilterOptions.options)
+                                            props.setFilterOptions(props.allFilterOptions.instagaramFilterOptions)
                                         }}
                                     >
                                         <i className="fab fa-instagram"></i>
@@ -87,7 +86,7 @@ function LsideBarSMtrends(props) {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setIconPills("4");
-                                            props.setFilterOptions(props.allFilterOptions.linkedInFilterOptions.options)
+                                            props.setFilterOptions(props.allFilterOptions.linkedInFilterOptions)
                                         }}
                                     >
                                         <i className="fab fa-linkedin-in"></i>
@@ -101,11 +100,11 @@ function LsideBarSMtrends(props) {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setIconPills("5");
-                                            props.setFilterOptions(props.allFilterOptions.youTubeFilterOptions.options)
+                                            props.setFilterOptions(props.allFilterOptions.youTubeFilterOptions)
                                         }}
                                     >
                                         <i className="fab fa-youtube"></i>
-                                       {" "} {props.allFilterOptions.youTubeFilterOptions.name} <i className={iconPills === "4" ? "arrow right" : ""}></i>
+                                       {" "} {props.allFilterOptions.youTubeFilterOptions.name} <i className={iconPills === "5" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                             </Nav>

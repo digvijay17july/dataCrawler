@@ -33,9 +33,9 @@ function RsideBarSMtrends(props) {
 
         return (<NavItem><NavLink className={iconPills === props.index ? "active" : ""} onClick={(e) => { e.preventDefault(); setIconPills(props.index) }} href="#pablo"> {props.value}</NavLink>{iconPills === props.index ?props.searchOptions:null} </NavItem>);
     }
-    console.log("filter options are :" + (props.filterOptions))
+    console.log("filter options are :" + (props.filterOptions.options))
     const listItems = [];
-    props.filterOptions.forEach((item, index) => {
+    props.filterOptions.options.forEach((item, index) => {
         listItems.push(<ListItem index={item.key} key={item.key} value={item.value} searchOptions={item.searchOptions} />)
     });
 
@@ -46,9 +46,10 @@ function RsideBarSMtrends(props) {
             < section className="section-full-screen " >
                 <Container fluid>
                     <Card  >
-                        <h4 className="title text-center ">Graph Filters</h4>
+                     
+                        <h4 className="text-center">Filter Options <span class="mr-1 badge badge-default"> <i className={props.filterOptions.icon}></i> {props.filterOptions.name}</span></h4>
                         < CardHeader className="section-full-screen " >
-
+<hr></hr>
                             <Nav className="justify-content-left" role="tablist" tabs>
                                 {listItems}
                                 {/* <NavItem>

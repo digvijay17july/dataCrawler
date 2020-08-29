@@ -120,34 +120,34 @@ function SocialMediaTrendsPage() {
         options: [{
             key: "1", value: "#tags", searchOptions: searchOptions("DatePicker")
         }, { key: "2", value: "#trends", searchOptions: searchOptions("DatePicker") }],
-            name: "Twitter"
+        name: "Twitter", icon:"fab fa-twitter"
     }
     const facebookFilterOptions = {
         options: [{ key: "1", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trendingPages", searchOptions: searchOptions("DatePicker") }],
-        name: "Facebook"
+        name: "Facebook", icon: "fab fa-facebook-square"
     }
     const linkedInFilterOptions = {
         options: [{ key: "1", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trendingPosts", searchOptions: searchOptions("DatePicker") }],
-        name: "LinkedIn"
+        name: "LinkedIn", icon: "fab fa-linkedin-in"
     }
     const instagaramFilterOptions = {
         options: [{ key: "1", value: "#tags", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#posts", searchOptions: searchOptions("DatePicker") }, { key: "3", value: "#trendingPosts", searchOptions: searchOptions("DatePicker") }],
-        name: "Instagaram"
+        name: "Instagaram", icon: "fab fa-instagram"
     }
     const youTubeFilterOptions = {
         options: [{ key: "1", value: "#videos", searchOptions: searchOptions("DatePicker") }, { key: "2", value: "#trailers", searchOptions: searchOptions("DatePicker") }, { key: "3", value: "#trendingVideos", searchOptions: searchOptions("DatePicker") }],
-        name: "Youtube"
+        name: "Youtube", icon: "fab fa-youtube"
     }
 
     const allFilterOptions = {
-        youTubeFilterOptions: youTubeFilterOptions,
         instagaramFilterOptions: instagaramFilterOptions,
         linkedInFilterOptions: linkedInFilterOptions,
         facebookFilterOptions: facebookFilterOptions,
-        twitterFilterOptions: twitterFilterOptions
+        twitterFilterOptions: twitterFilterOptions,
+        youTubeFilterOptions: youTubeFilterOptions
     }
    
-    const [filterOptions, setFilterOptions] = useState(twitterFilterOptions.options)
+    const [filterOptions, setFilterOptions] = useState(twitterFilterOptions)
     const div2PDF = (e,id) => {
         /////////////////////////////
         // Hide/show button if you need
@@ -291,7 +291,7 @@ function SocialMediaTrendsPage() {
                             </div>
                         </Col>
                         <Col md={2}>
-                            <RightSideBar filterOptions={filterOptions} />
+                            <RightSideBar filterOptions={filterOptions} optionsHeading/>
                         </Col>
                     </ Row>
                     <Row>
