@@ -13,7 +13,7 @@ import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/login/LoginPage.js";
 import PanelPage from "views/panel/PanelPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import ProfilePage from "views/profile/ProfilePage.js";
 import SignUpPage from "views/signUp/SignUpPage.js";
 import AboutUsPage from "views/aboutUs/AboutUs.js"
 import SocialMediaTrendsPage from "views/dashboard/SocialMediaTrendsPage.js"

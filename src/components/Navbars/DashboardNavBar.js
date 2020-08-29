@@ -59,13 +59,13 @@ function DashboardNavbar() {
                                             href="#pablo"
                                             onClick={(e) => e.preventDefault()}
                                         >
-                                            <p>Discover</p>
+                                            <p>Social Media Panel</p>
                                         </NavLink>
                                     </NavItem>
                                     <NavItem>
                                         <NavLink
-                                            href="#pablo"
-                                            onClick={(e) => e.preventDefault()}
+                                            href="/profile-page"
+                                           
                                         >
                                             <p>Profile</p>
                                         </NavLink>

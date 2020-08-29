@@ -163,10 +163,10 @@ function SocialMediaTrendsPage() {
             pdf.addImage(
                 img,
                 "png",
-                input.offsetLeft+20,
-                input.offsetTop+20,
-                input.clientWidth+20,
-                input.clientHeight+20
+                input.offsetLeft-20,
+                input.offsetTop-20,
+                input.clientWidth-20,
+                input.clientHeight-20
             );
             pdf.save("chart.pdf");
             // but.style.display = "block";

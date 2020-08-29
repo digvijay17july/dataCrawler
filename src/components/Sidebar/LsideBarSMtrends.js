@@ -46,9 +46,9 @@ function LsideBarSMtrends(props) {
                                             props.setFilterOptions(props.allFilterOptions.twitterFilterOptions.options)
                                         }}
                                     >
-                                        <i className="now-ui-icons objects_umbrella-13"></i>
+                                        <i className="fab fa-twitter"></i>
 
-                                        {props.allFilterOptions.twitterFilterOptions.name}  <i className={iconPills === "1" ? "arrow right" : ""}></i>
+                                        {" "} {props.allFilterOptions.twitterFilterOptions.name}  <i className={iconPills === "1" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -61,8 +61,9 @@ function LsideBarSMtrends(props) {
                                             props.setFilterOptions(props.allFilterOptions.facebookFilterOptions.options)
                                         }}
                                     >
-                                        <i className="now-ui-icons shopping_cart-simple"></i>
-                                        {props.allFilterOptions.facebookFilterOptions.name}  <i className={iconPills === "2" ? "arrow right" : ""}></i>
+                                        <i className="fab fa-facebook-square"></i>
+                                        {" "}{props.allFilterOptions.facebookFilterOptions.name}
+                                         <i className={iconPills === "2" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -75,8 +76,8 @@ function LsideBarSMtrends(props) {
                                             props.setFilterOptions(props.allFilterOptions.instagaramFilterOptions.options)
                                         }}
                                     >
-                                        <i className="now-ui-icons shopping_shop"></i>
-                                        {props.allFilterOptions.instagaramFilterOptions.name} <i className={iconPills === "3" ? "arrow right" : ""}></i>
+                                        <i className="fab fa-instagram"></i>
+                                       {" "} {props.allFilterOptions.instagaramFilterOptions.name} <i className={iconPills === "3" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -89,8 +90,8 @@ function LsideBarSMtrends(props) {
                                             props.setFilterOptions(props.allFilterOptions.linkedInFilterOptions.options)
                                         }}
                                     >
-                                        <i className="now-ui-icons ui-2_settings-90"></i>
-                                        {props.allFilterOptions.linkedInFilterOptions.name} <i className={iconPills === "4" ? "arrow right" : ""}></i>
+                                        <i className="fab fa-linkedin-in"></i>
+                                        {" "} {props.allFilterOptions.linkedInFilterOptions.name} <i className={iconPills === "4" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -103,8 +104,8 @@ function LsideBarSMtrends(props) {
                                             props.setFilterOptions(props.allFilterOptions.youTubeFilterOptions.options)
                                         }}
                                     >
-                                        <i className="now-ui-icons ui-2_settings-90"></i>
-                                        {props.allFilterOptions.youTubeFilterOptions.name} <i className={iconPills === "4" ? "arrow right" : ""}></i>
+                                        <i className="fab fa-youtube"></i>
+                                       {" "} {props.allFilterOptions.youTubeFilterOptions.name} <i className={iconPills === "4" ? "arrow right" : ""}></i>
                                     </NavLink>
                                 </NavItem>
                             </Nav>
