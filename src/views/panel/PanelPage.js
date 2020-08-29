@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -43,11 +43,13 @@ function PanelPage() {
               <Row>
                    <Col md="4">
                   <div className="team-player">
+                    <Link to="/searchTrends">
                     <img
                       alt="..."
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/search-01.jpg")}
-                    ></img>
+                      ></img>
+                      </Link>
                     <h4 className="title">Search Trends</h4>
                     <p className="category text-info">Search using kewords</p>
                     <p className="description">
@@ -63,11 +65,14 @@ function PanelPage() {
                 < Col md = "4" ></Col>
                 <Col md="4">
                   <div className="team-player">
+                    <Link to="/socialMediaTrends">
                     <img
                       alt="..."
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/trends-01.jpg")}
-                    ></img>
+                    
+                      ></img>
+                    </Link>
                     <h4 className="title">Social Media Trends</h4>
                     <p className="category text-info">Get the trending keywords</p>
                     <p className="description">
