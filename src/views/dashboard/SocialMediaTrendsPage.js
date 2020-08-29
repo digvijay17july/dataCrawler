@@ -91,12 +91,12 @@ function SocialMediaTrendsPage() {
 
     const searchOptions = (type) => {
         switch (type) {
-            case "DatePicker": return ((<div className="datepicker-container">
+            case "DatePicker": return ((<div  className="datepicker-container">
                 <hr></hr>
                 <FormGroup>
                     <Datetime
                         timeFormat={false}
-                        inputProps={{ placeholder: "Datetime Picker Here" }}
+                        inputProps={{ placeholder: "Choose Date" }}
                     />
                 </FormGroup>
                     <FormGroup>

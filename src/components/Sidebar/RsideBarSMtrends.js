@@ -47,7 +47,7 @@ function RsideBarSMtrends(props) {
                 <Container fluid>
                     <Card  >
                      
-                        <h4 className="text-center">Filter Options <span class="mr-1 badge badge-default"> <i className={props.filterOptions.icon}></i> {props.filterOptions.name}</span></h4>
+                        <h4 className="text-center">Filter Options <span className="mr-1 badge badge-default"> <i className={props.filterOptions.icon}></i> {props.filterOptions.name}</span></h4>
                         < CardHeader className="section-full-screen " >
 <hr></hr>
                             <Nav className="justify-content-left" role="tablist" tabs>
